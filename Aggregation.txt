@@ -1,0 +1,19 @@
+Aggregation 是 Spring Data MongoDB 提供的一个用于构建 MongoDB 聚合查询的类，它可以将多个操作组合在一起形成一个聚合管道，以便实现更复杂的查询操作。下面是 Aggregation 类的常用方法的详解：
+
+newAggregation(AggregationOperation... operations)：使用一组 AggregationOperation 对象创建 Aggregation 对象。
+
+newAggregation(Class<?> inputType, AggregationOperation... operations)：使用一组 AggregationOperation 对象和输入类型创建 Aggregation 对象。
+
+match(Criteria criteria)：用于筛选文档，类似于 MongoDB 的 $match 操作。
+
+project(String... fields)：用于从文档中选择要返回的字段，类似于 MongoDB 的 $project 操作。
+
+group(String... fields)：用于对文档进行分组，类似于 MongoDB 的 $group 操作。
+
+sort(Sort.Direction direction, String... fields)：用于对文档进行排序，类似于 MongoDB 的 $sort 操作。
+
+skip(long skip)：用于跳过指定数量的文档，类似于 MongoDB 的 $skip 操作。
+
+limit(long limit)：用于限制返回的文档数量，类似于 MongoDB 的 $limit 操作。
+
+count()：用于统计匹配到的文档数量，类似于 MongoDB 的 $count 操作。

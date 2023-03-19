@@ -1,0 +1,10 @@
+LookupOperation 是 Spring Data MongoDB 提供的一个用于执行 MongoDB 的 $lookup 操作的类，它用于在查询中关联两个集合并将它们的数据合并在一起。下面是 LookupOperation 类的常用方法的详解：
+
+from(String collectionName)：指定要进行关联的集合名称。
+
+localField(String fieldName)：指定当前集合中用于关联的字段名称。
+
+foreignField(String fieldName)：指定要关联的集合中用于关联的字段名称。
+
+as(String fieldName)：指定关联后数据在当前文档中的字段名称。
+

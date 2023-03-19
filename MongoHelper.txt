@@ -1,0 +1,27 @@
+MongoHelper 并不是 Spring Data MongoDB 提供的类，而是一种自定义的工具类，通常用于封装一些 MongoDB 数据库操作的公共方法。下面是 MongoHelper 类的常用方法的详解：
+
+getMongoClient()：获取 MongoClient 对象，MongoClient 是 MongoDB Java Driver 提供的主要入口点，用于连接 MongoDB 数据库。
+
+getMongoDatabase(String databaseName)：获取指定名称的 MongoDatabase 对象，MongoDatabase 是 MongoDB Java Driver 提供的用于操作 MongoDB 数据库的 API。
+
+getMongoCollection(String databaseName, String collectionName)：获取指定名称的 MongoCollection 对象，MongoCollection 是 MongoDB Java Driver 提供的用于操作集合的 API。
+
+createIndex(String databaseName, String collectionName, Index index)：在指定集合中创建索引，Index 是 MongoDB Java Driver 提供的用于定义索引的 API。
+
+find(MongoCollection<Document> collection, Bson filter)：根据查询条件查询文档。
+
+findOne(MongoCollection<Document> collection, Bson filter)：根据查询条件查询单个文档。
+
+insertOne(MongoCollection<Document> collection, Document document)：向指定集合中插入一个新的文档。
+
+insertMany(MongoCollection<Document> collection, List<Document> documents)：向指定集合中插入多个新的文档。
+
+updateOne(MongoCollection<Document> collection, Bson filter, Bson update)：更新集合中符合条件的第一个文档。
+
+updateMany(MongoCollection<Document> collection, Bson filter, Bson update)：更新集合中符合条件的所有文档。
+
+deleteOne(MongoCollection<Document> collection, Bson filter)：根据查询条件删除集合中符合条件的第一个文档。
+
+deleteMany(MongoCollection<Document> collection, Bson filter)：根据查询条件删除集合中符合条件的所有文档。
+
+以上是 MongoHelper 类的常用方法，这些方法封装了 MongoDB Java Driver 的 API，使用它们可以方便地进行 MongoDB 数据库的操作。开发者可以根据实际需要选择相应的方法进行使用。

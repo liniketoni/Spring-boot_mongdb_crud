@@ -1,0 +1,17 @@
+QueryMapper是一个用于Java应用程序中ORM（对象关系映射）的工具，可以将Java对象映射到数据库表中的行，同时支持动态查询。下面是QueryMapper中的一些常用方法：
+
+selectOne(String statementId, Object parameter): 通过指定的语句ID和参数，从数据库中查询一条记录并返回对应的Java对象。
+
+selectList(String statementId, Object parameter): 通过指定的语句ID和参数，从数据库中查询多条记录并返回对应的Java对象列表。
+
+insert(String statementId, Object parameter): 通过指定的语句ID和参数，将一个Java对象插入到数据库表中。
+
+update(String statementId, Object parameter): 通过指定的语句ID和参数，更新数据库表中与Java对象对应的行。
+
+delete(String statementId, Object parameter): 通过指定的语句ID和参数，删除数据库表中与Java对象对应的行。
+
+selectMap(String statementId, Object parameter, String keyProperty): 通过指定的语句ID和参数，从数据库中查询多条记录并返回一个Map对象，其中Map的key由指定的Java对象属性（keyProperty）决定。
+
+select(String statement, ResultHandler handler): 通过指定的语句和结果处理器，从数据库中查询多条记录并使用结果处理器处理查询结果。结果处理器（ResultHandler）是一个回调接口，您可以在实现中定义自己的处理逻辑。
+
+以上是QueryMapper中的一些常用方法，您可以根据自己的需求选择使用。另外，QueryMapper还提供了一些高级功能，如缓存、批量操作、存储过程调用等。

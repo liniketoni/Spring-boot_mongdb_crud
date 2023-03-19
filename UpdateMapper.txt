@@ -1,0 +1,27 @@
+UpdateMapper是一个抽象类，它提供了一些方法来更新Java对象或者数据库表的记录。下面是一些UpdateMapper的方法的详细介绍：
+
+updateByPrimaryKeySelective(Object obj)
+该方法根据主键更新一个Java对象或者数据库表中的一条记录。该方法只更新不为null的属性。
+
+updateByPrimaryKey(Object obj)
+该方法根据主键更新一个Java对象或者数据库表中的一条记录。该方法更新所有属性，不论其是否为null。
+
+updateByExampleSelective(Object obj, Example example)
+该方法根据指定的Example对象更新一个Java对象或者数据库表中的记录。Example对象包含了要更新的记录的查询条件。该方法只更新不为null的属性。
+
+updateByExample(Object obj, Example example)
+该方法根据指定的Example对象更新一个Java对象或者数据库表中的记录。Example对象包含了要更新的记录的查询条件。该方法更新所有属性，不论其是否为null。
+
+updateByPrimaryKeyWithBLOBs(Object obj)
+该方法根据主键更新一个Java对象或者数据库表中的一条记录，可以更新包含BLOB字段的记录。
+
+updateByExampleWithBLOBs(Object obj, Example example)
+该方法根据指定的Example对象更新一个Java对象或者数据库表中的记录，可以更新包含BLOB字段的记录。
+
+updateByPrimaryKeySelectiveWithVersion(Object obj)
+该方法根据主键更新一个Java对象或者数据库表中的一条记录，并使用版本号进行乐观锁控制。该方法只更新不为null的属性。
+
+updateByPrimaryKeyWithVersion(Object obj)
+该方法根据主键更新一个Java对象或者数据库表中的一条记录，并使用版本号进行乐观锁控制。该方法更新所有属性，不论其是否为null。
+
+这些方法提供了更新Java对象或者数据库表记录的不同方式和控制方式。可以根据需要选择合适的方法来完成更新操作。
