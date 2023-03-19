@@ -47,6 +47,8 @@ class DemoApplicationTests {
     void MongoInsertCollection(){
 
 
+        mongoTemplate.dropCollection(student.class);
+
         List<student> list = Arrays.asList(
                 new student("name1",23,false,new Date()),
                 new student("name2",21,false,new Date()),
